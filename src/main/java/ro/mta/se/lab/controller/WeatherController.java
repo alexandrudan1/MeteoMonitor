@@ -3,6 +3,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.ComboBox;
+import ro.mta.se.lab.Utils;
 import ro.mta.se.lab.model.City;
 
 import java.io.IOException;
@@ -65,6 +66,11 @@ public class WeatherController {
     @FXML
     private void selected_City() throws IOException, ParseException {
         mCity = (String) selectcity.getValue();
+    }
+    public void get_Info() throws IOException, ParseException {
+
+        Utils util = new Utils();
+        StringBuffer json = util.request_api(mCity);
     }
 
 }
