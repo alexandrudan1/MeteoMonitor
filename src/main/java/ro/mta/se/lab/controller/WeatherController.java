@@ -3,6 +3,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.ComboBox;
+import ro.mta.se.lab.Parser;
 import ro.mta.se.lab.Utils;
 import ro.mta.se.lab.model.City;
 
@@ -71,6 +72,7 @@ public class WeatherController {
 
         Utils util = new Utils();
         StringBuffer json = util.request_api(mCity);
+        Parser parser=new Parser(json);
     }
 
 }
