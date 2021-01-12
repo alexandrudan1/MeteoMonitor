@@ -75,6 +75,7 @@ public class WeatherController {
         StringBuffer json = util.request_api(mCity);
         Parser parser=new Parser(json);
         CurrentWeather cw= util.updateWeather(parser);
+        String timp=util.get_date();
     }
 
 }

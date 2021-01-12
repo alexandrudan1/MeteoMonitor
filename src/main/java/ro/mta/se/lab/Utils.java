@@ -9,6 +9,8 @@ import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.text.ParseException;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 
 public class Utils {
@@ -50,6 +52,12 @@ public class Utils {
 
         CurrentWeather cw=new CurrentWeather(p.get_humidiy(),p.get_visibility(), p.get_temp(), p.get_feels(),p.get_max(),p.get_min(),p.get_pressure());
         return cw;
+    }
+    public String get_date(){
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("HH:mm:ss dd-MM-yyy");
+        LocalDateTime now = LocalDateTime.now();
+        String time= dtf.format(now);
+        return time;
     }
 
 }
