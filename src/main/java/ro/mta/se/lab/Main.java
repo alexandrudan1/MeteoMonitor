@@ -22,6 +22,8 @@ public class Main extends Application {
 
 
     public void start(Stage primaryStage) {
+        Utils utils=new Utils();
+        orasData=utils.initCity();
         FXMLLoader loader = new FXMLLoader();
         try {
             loader.setLocation(this.getClass().getResource("/view/WeatherView.fxml"));
