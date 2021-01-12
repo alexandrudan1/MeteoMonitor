@@ -3,10 +3,12 @@ package ro.mta.se.lab;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import ro.mta.se.lab.model.City;
+import ro.mta.se.lab.model.CurrentWeather;
 
 import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.text.ParseException;
 import java.util.Scanner;
 
 public class Utils {
@@ -43,6 +45,11 @@ public class Utils {
         reader.close();
 
         return mJson;
+    }
+    public CurrentWeather updateWeather(Parser p) throws ParseException, org.json.simple.parser.ParseException {
+
+        CurrentWeather cw=new CurrentWeather(p.get_humidiy(),p.get_visibility(), p.get_temp(), p.get_feels(),p.get_max(),p.get_min(),p.get_pressure());
+        return cw;
     }
 
 }

@@ -6,6 +6,7 @@ import javafx.scene.control.ComboBox;
 import ro.mta.se.lab.Parser;
 import ro.mta.se.lab.Utils;
 import ro.mta.se.lab.model.City;
+import ro.mta.se.lab.model.CurrentWeather;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -68,11 +69,12 @@ public class WeatherController {
     private void selected_City() throws IOException, ParseException {
         mCity = (String) selectcity.getValue();
     }
-    public void get_Info() throws IOException, ParseException {
+    public void get_Info() throws IOException, ParseException, org.json.simple.parser.ParseException {
 
         Utils util = new Utils();
         StringBuffer json = util.request_api(mCity);
         Parser parser=new Parser(json);
+        CurrentWeather cw= util.updateWeather(parser);
     }
 
 }
