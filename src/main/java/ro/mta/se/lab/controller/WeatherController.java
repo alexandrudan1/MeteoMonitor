@@ -9,6 +9,7 @@ import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import org.json.simple.parser.ParseException;
+import ro.mta.se.lab.Logger;
 import ro.mta.se.lab.Utils;
 import ro.mta.se.lab.model.City;
 import ro.mta.se.lab.Parser;
@@ -113,6 +114,7 @@ public class WeatherController {
     public void get_Info() throws IOException, ParseException, java.text.ParseException {
 
         Utils util = new Utils();
+        Logger logger=new Logger();
         StringBuffer json=util.request_api(mCity);
         Parser parser=new Parser(json);
         CurrentWeather cw= util.updateWeather(parser);
@@ -134,7 +136,7 @@ public class WeatherController {
         String timp=util.get_date();
         time.setText(timp);
 
-
+        logger.writeToFile(timp,mCity,mCountry,cw);
 
         Image  image=new Image("sun.png");
         switch(parser.get_main()) {
