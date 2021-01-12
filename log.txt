@@ -1,0 +1,5 @@
+00:04:02 13-01-2021 Moscow, Rusia temp:-11°C humidity:85 % pressure:1019 hPa
+00:04:08 13-01-2021 Razvilka, Rusia temp:-10°C humidity:92 % pressure:1019 hPa
+00:07:59 13-01-2021 Tarascon, Franta temp:3°C humidity:65 % pressure:1020 hPa
+00:08:13 13-01-2021 Moscow, Rusia temp:-11°C humidity:85 % pressure:1019 hPa
+00:08:14 13-01-2021 Razvilka, Rusia temp:-10°C humidity:92 % pressure:1019 hPa
