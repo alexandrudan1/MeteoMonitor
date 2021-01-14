@@ -3,4 +3,4 @@ id       nume      lat        long      country
 524901  Moscow    55.752220  37.615555 Rusia
 297334  Tarascon  43.805828  4.660280  Franta
 123456  Motru     112.21212  121.1223  Romania
-123456  Bucharest     112.21212  121.1223  Romania
+123457  Bucharest 44.4323    26.1063   Romania

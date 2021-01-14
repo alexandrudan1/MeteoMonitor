@@ -3,7 +3,6 @@ package ro.mta.se.lab.controller;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
@@ -24,14 +23,11 @@ public class WeatherController {
     private ObservableList<String> countryList = FXCollections.observableArrayList();
     private String mCountry;
     private String mCity;
-    private Image mLogo;
 
     @FXML
     private ComboBox<String> selectcountry;
     @FXML
     private ComboBox<String> selectcity;
-    @FXML
-    private Button buton;
     @FXML
     private ImageView img;
     @FXML
@@ -116,6 +112,7 @@ public class WeatherController {
         Utils util = new Utils();
         Logger logger=new Logger();
         StringBuffer json=util.request_api(mCity);
+        System.out.println(json);
         Parser parser=new Parser(json);
         CurrentWeather cw= util.updateWeather(parser);
 
