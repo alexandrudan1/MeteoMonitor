@@ -13,12 +13,23 @@ import ro.mta.se.lab.Utils;
 import ro.mta.se.lab.model.City;
 import ro.mta.se.lab.Parser;
 import ro.mta.se.lab.model.CurrentWeather;
-
 import java.io.*;
 
-
+/**
+ * @author Dan Alexandru
+ * WeatherController este un controller pentru modelul MVC si face legatura dintre model si view.
+ */
 public class WeatherController {
 
+    /**
+     * membrul mCity reprezinta orasul selectat de utilizator
+     * membrul mCountry reprezinta tara selecata de utilizator
+     * membrul cityData reprezinta lista de orase citite din fisier
+     * membrul countryList reprezinta tarile din care fac parte orasele citite din fisier
+     * membrul selectcountry este combobox-ul pentru alegerea tarii din interfata grafica
+     * membrul selectcity este combobox-ul pentru alegerea orasului din interfata grafica
+     * label-urile  sunt folosite pentru a afisa in detalii despre vreme in interfata grafica
+     */
     private ObservableList<City> cityData;
     private ObservableList<String> countryList = FXCollections.observableArrayList();
     private String mCountry;
@@ -59,10 +70,17 @@ public class WeatherController {
     @FXML
     private Label time;
 
+    /**
+     * constructor pentur clasa WeatherController
+     * @param cityData reprezinta orasele citite din fisier si transmise la Controller
+     */
     public WeatherController(ObservableList<City> cityData) {
         this.cityData = cityData;
     }
 
+    /**
+     * Functia in care se creeaza o lista cu tarile
+     */
     private void initCountryList() {
 
         for (City city : cityData) {
@@ -79,6 +97,9 @@ public class WeatherController {
 
     }
 
+    /**
+     * Functia care afiseaza tarile in GUI
+     */
     @FXML
     private void select_country() {
         initCountryList();
@@ -87,11 +108,17 @@ public class WeatherController {
             selectcountry.getItems().add(country);
         }
     }
+    /**
+     * functie care  pune in mCountry tara selectata de utilizator in GUI
+     */
     @FXML
     private void selected_Country() {
         mCountry = (String) selectcountry.getValue();
     }
 
+    /**
+     * Functia care afiseaza orasele in GUI
+     */
     @FXML
     private void select_city() {
         selectcity.getItems().clear();
@@ -100,6 +127,10 @@ public class WeatherController {
                 selectcity.getItems().add(city.getNume());
         }
     }
+    /**
+     * functie care pune in mCity orasul selectat de utilizator in GUI
+     * si apeleaza functia get_Info() pentru a obtine datele meteo
+     */
     @FXML
     private void selected_City() throws IOException, ParseException, java.text.ParseException {
         mCity = (String) selectcity.getValue();
@@ -107,6 +138,13 @@ public class WeatherController {
             get_Info();
     }
 
+    /**
+     * in functia get_Info() se obtin datele meteo pentru orasul ales
+     * utilizeaza un obiect din clasa Util care va efectua un request la API si returneaza un JSON
+     * un obiect Parser se ocupa de parsarea fisierului JSON si returneaza datele relevante despre vreme
+     * date despre vreme se retin in clasa CurrentWeather
+     * se instantiaza si un obiect Logger care scrie intr-un fisier istoricul
+     */
     public void get_Info() throws IOException, ParseException, java.text.ParseException {
 
         Utils util = new Utils();
@@ -137,6 +175,9 @@ public class WeatherController {
 
         logger.writeToFile(timp,mCity,mCountry,cw);
 
+        /**
+         * se alege o imagine in functie de starea vremii
+         */
         Image  image=new Image("sun.png");
         switch(parser.get_main()) {
             case "Snow":
