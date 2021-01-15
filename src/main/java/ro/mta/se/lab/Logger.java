@@ -5,7 +5,10 @@ import ro.mta.se.lab.model.CurrentWeather;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
-
+/**
+ * @author Dan Alexandru
+ * Aceasta clasa implementeaza scrierea istoricului in fisierul log.txt
+ */
 public class Logger {
     public Logger() {
     }

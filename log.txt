@@ -32,3 +32,4 @@
 16:18:54 15-01-2021 London, UK temp:3°C humidity:87 % pressure:1031 hPa
 16:18:59 15-01-2021 Berlin, Germania temp:0°C humidity:80 % pressure:1023 hPa
 16:20:00 15-01-2021 Vienna, Austria temp:0°C humidity:69 % pressure:1018 hPa
+17:30:20 15-01-2021 Razvilka, Rusia temp:-13°C humidity:78 % pressure:1009 hPa

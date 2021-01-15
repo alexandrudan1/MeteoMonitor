@@ -4,10 +4,8 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
-import org.mockito.junit.MockitoRule;
 import ro.mta.se.lab.Parser;
 import ro.mta.se.lab.Utils;
-import ro.mta.se.lab.model.City;
 
 import org.mockito.*;
 import org.mockito.junit.MockitoJUnit;
@@ -20,8 +18,17 @@ import java.text.ParseException;
 import static org.junit.Assert.*;
 import static org.mockito.Mockito.*;
 
+/**
+ * @author Dan Alexandru
+ * Clasa aceasta realizeaza testarea  Mockito a clasei WeatherController
+ *
+ */
 public class WeatherControllerTestMockito {
 
+    /**
+     * membriul util de tipul mock reprezinta obiectul Utils pe care il vom utiliza la testare
+     * membriul parser de tipul mock reprezinta obiectul Parser pe care il vom utiliza la testare
+     */
     @Mock
     Utils util;
     @Mock
@@ -35,6 +42,9 @@ public class WeatherControllerTestMockito {
         cw=new CurrentWeather("1000","1000","1000", "1000","1000","1000","1000");
     }
 
+    /**
+     * testarea acestuia cu ajutorul unui obiect mockito
+     */
     @Test
     public void get_Info() throws ParseException, org.json.simple.parser.ParseException, IOException {
 
