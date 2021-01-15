@@ -112,7 +112,9 @@ public class WeatherController {
         Utils util = new Utils();
         Logger logger=new Logger();
         StringBuffer json=util.request_api(mCity);
-        System.out.println(json);
+        if(json==null){
+            System.out.println("Eroare API");
+        }
         Parser parser=new Parser(json);
         CurrentWeather cw= util.updateWeather(parser);
 

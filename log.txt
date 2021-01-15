@@ -25,3 +25,5 @@
 22:24:20 14-01-2021 Motru, Romania temp:-1°C humidity:92 % pressure:1011 hPa
 22:38:50 14-01-2021 Bucharest, Romania temp:0°C humidity:93 % pressure:1008 hPa
 23:02:17 14-01-2021 Bucharest, Romania temp:0°C humidity:93 % pressure:1008 hPa
+16:01:53 15-01-2021 Tarascon, Franta temp:9°C humidity:57 % pressure:1018 hPa
+16:04:52 15-01-2021 Tarascon, Franta temp:9°C humidity:57 % pressure:1018 hPa
