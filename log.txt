@@ -27,3 +27,8 @@
 23:02:17 14-01-2021 Bucharest, Romania temp:0°C humidity:93 % pressure:1008 hPa
 16:01:53 15-01-2021 Tarascon, Franta temp:9°C humidity:57 % pressure:1018 hPa
 16:04:52 15-01-2021 Tarascon, Franta temp:9°C humidity:57 % pressure:1018 hPa
+16:18:49 15-01-2021 Milano, Italia temp:6°C humidity:56 % pressure:1017 hPa
+16:18:50 15-01-2021 Rome, Italia temp:3°C humidity:81 % pressure:1008 hPa
+16:18:54 15-01-2021 London, UK temp:3°C humidity:87 % pressure:1031 hPa
+16:18:59 15-01-2021 Berlin, Germania temp:0°C humidity:80 % pressure:1023 hPa
+16:20:00 15-01-2021 Vienna, Austria temp:0°C humidity:69 % pressure:1018 hPa

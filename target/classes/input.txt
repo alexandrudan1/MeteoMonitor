@@ -4,3 +4,10 @@ id       nume      lat        long      country
 297334  Tarascon  43.805828  4.660280  Franta
 123456  Motru     112.21212  121.1223  Romania
 123457  Bucharest 44.4323    26.1063   Romania
+169070  Rome      41.8947    12.4839   Italia
+542283  Milano    45.4642    9.192     Italia
+311773  Madrid    40.4165    -3.7026   Spania
+295015  Berlin    52.5244    13.4105   Germania
+342353  London    51.509865  -0.118092 UK
+435542  Arad      45.760696  21.226788 Romania
+564465  Vienna     42.698334  23.319941 Austria
